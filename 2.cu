@@ -21,7 +21,8 @@ int main(void) {
     int *d_a;
     cudaMalloc((void**)&d_a, N*sizeof(int));
     cudaMemcpy(d_a, h_a, N*sizeof(int), cudaMemcpyHostToDevice);
-    
+
+    // Launch enough threads to cover the N
     int threadsPerBlock = 3;
     int blocks = (N + threadsPerBlock - 1) / threadsPerBlock; // ceil(N / threadsPerBlock)
 
