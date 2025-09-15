@@ -3,3 +3,7 @@
 .vscode
 hw
 hw2
+*
+!*.*
+!*/
+.vscode

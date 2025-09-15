@@ -31,45 +31,34 @@ void colorToGrayscaleConversion(unsigned char *Pout,
 }
 
 int main() {
-    // Example dimensions (1500 x 2000 image)
     int width = 2000;
     int height = 1500;
     int numPixels = width * height;
 
-    // Host memory allocation
     unsigned char *h_in  = (unsigned char*)malloc(numPixels * CHANNELS);
     unsigned char *h_out = (unsigned char*)malloc(numPixels);
 
-    // (Here you would normally load image data into h_in)
-    // For demo: just fill with random data
     for (int i = 0; i < numPixels * CHANNELS; i++) {
         h_in[i] = (unsigned char)(rand() % 256);
     }
 
-    // Device memory allocation
     unsigned char *d_in, *d_out;
     cudaMalloc((void**)&d_in,  numPixels * CHANNELS);
     cudaMalloc((void**)&d_out, numPixels);
 
-    // Copy input image to device
     cudaMemcpy(d_in, h_in, numPixels * CHANNELS, cudaMemcpyHostToDevice);
 
-    // Configure blocks and grids
     dim3 dimBlock(16, 16, 1);
     dim3 dimGrid((width  + dimBlock.x - 1) / dimBlock.x,
                  (height + dimBlock.y - 1) / dimBlock.y,
                  1);
 
-    // Launch kernel
     colorToGrayscaleConversion<<<dimGrid, dimBlock>>>(d_out, d_in, width, height);
 
-    // Copy result back to host
     cudaMemcpy(h_out, d_out, numPixels, cudaMemcpyDeviceToHost);
 
-    // (Here you would normally save h_out as a grayscale image)
     printf("Conversion done! Example output pixel[0] = %d\n", h_out[0]);
 
-    // Free memory
     free(h_in);
     free(h_out);
     cudaFree(d_in);
