@@ -8,7 +8,7 @@ __global__ void MatrixMulKernel(float *M, float *N, float *P, int Width) {
     if ((row < Width) && (col < Width)) {
         float Pvalue = 0;
         for (int k = 0; k < Width; ++k) {
-            Pvalue += M[row * Width + k] * N[k * Width + col];
+            Pvalue += M[row * Width + k] * N[k * Width + col]; // (same row + changing col) * (changing row + same col)
         }
         P[row * Width + col] = Pvalue;
     }
