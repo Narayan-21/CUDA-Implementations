@@ -6,6 +6,9 @@
 // __threadfence_block() - visibility within a block.
 // __threadfence_system() - visibility to host and device.
 
+// Best Practice to ensure correct synchronization and data coherence between thread blocks in CUDA -
+// 1. Do not rely on __threadfence() for synchronization between arbitrary blocks.
+// 2. Use proper kernel launches and atomic operations, or redesign algorithms with multiple kernel launches to guarantee ordering between blocks.
 
 #include <stdio.h>
 
