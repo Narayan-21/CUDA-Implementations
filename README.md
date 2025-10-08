@@ -28,6 +28,7 @@ A collection of CUDA programs ranging from beginner to advanced level, designed 
 - [Tiled Matrix Multiplication with Boundary Condition Checks (Extension of 6.TileMatMul.cu)](./Cuda%20Memory/7.%20TileMatMulBnd.cu)
 - [Tiled Matrix Multiplication with Dynamic Shared Memory Allocation](./Cuda%20Memory/8.%20TiledMatMulDynamic.cu)
 - [Tiled Matrix Multiplication with Corner turning approach](./Cuda%20Memory/9.%20CornerTurn.cu)
+- [Tiled Matrix Multiplication with Thread Coarsening](./Cuda%20Memory/10.%20ThreadCoarsening.cu)
 
 #### CUDA Memory Fencing
 - [Memory fencing with __threadfence_block() – Intra-block memory visibility](./Cuda%20Memory/Memory%20fencing/1.%20threadFence_block.cu)
