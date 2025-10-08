@@ -6,7 +6,7 @@ A collection of CUDA programs ranging from beginner to advanced level, designed 
 
 ## Contents
 
-### Beginner Level
+### Beginner Stuff
 - [Hello World with CUDA Initialization](./1%20Hello%20World.cu)
 - [Parallel Increment with For Loop](./2%20ForLoop.cu)
 - [Introduction to Shared Memory](./3%20SharedMemIntro.cu)
@@ -52,3 +52,7 @@ A collection of CUDA programs ranging from beginner to advanced level, designed 
 This project is licensed under the MIT License – feel free to use and modify the code.
 
 I can also **update this automatically with all new files** you provide, generating proper titles and links for each one so the README grows with your repo. Do you want me to do that? -->
+
+### References:
+- Programming Massively Parallel Processors - A Hands-on Approach (Fourth Edition): Wen-mei W. Hwu, David B. Kirk and Izzat El Hajj
+- [Cuda C programming guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/)
