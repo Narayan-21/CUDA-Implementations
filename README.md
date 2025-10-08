@@ -4,7 +4,7 @@ A collection of CUDA programs ranging from beginner to advanced level, designed 
 
 ---
 
-## 📂 Contents
+## Contents
 
 ### Beginner Level
 - [Hello World with CUDA Initialization](./1%20Hello%20World.cu)
@@ -27,6 +27,7 @@ A collection of CUDA programs ranging from beginner to advanced level, designed 
 - [Tiled Matrix Multiplication using Shared Memory](./Cuda%20Memory/6.%20TileMatMul.cu)
 - [Tiled Matrix Multiplication with Boundary Condition Checks (Extension of 6.TileMatMul.cu)](./Cuda%20Memory/7.%20TileMatMulBnd.cu)
 - [Tiled Matrix Multiplication with Dynamic Shared Memory Allocation](./Cuda%20Memory/8.%20TiledMatMulDynamic.cu)
+- [Tiled Matrix Multiplication with Corner turning approach](./Cuda%20Memory/9.%20CornerTurn.cu)
 
 #### CUDA Memory Fencing
 - [Memory fencing with __threadfence_block() – Intra-block memory visibility](./Cuda%20Memory/Memory%20fencing/1.%20threadFence_block.cu)
@@ -34,7 +35,7 @@ A collection of CUDA programs ranging from beginner to advanced level, designed 
 - [Memory fencing with __threadfence_system() – Host and device memory visibility](./Cuda%20Memory/Memory%20fencing/3.%20threadFenceSys.cu)
 ---
 
-## 🔧 How to Use
+## How to Use
 1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/CUDA-implementations.git
